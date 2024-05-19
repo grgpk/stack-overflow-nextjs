@@ -42,7 +42,7 @@ const Theme = () => {
           {themes.map((item) => (
             <MenubarItem
               key={item.value}
-              className="flex items-center gap-4 px-2.5 py-2 dark:focus:bg-dark-400"
+              className="flex items-center gap-4 px-2.5 py-2 focus:bg-light-800 dark:focus:bg-dark-400"
               onClick={() => {
                 setMode(item.value);
               }}
@@ -55,7 +55,7 @@ const Theme = () => {
                 className={`${mode === item.value && "active-theme"}`}
               />
               <p
-                className={`body-semibold text-light-500 ${mode === item.value ? "text-primary-500" : "text-dark100_light900"}`}
+                className={`body-semibold  ${mode === item.value ? "text-primary-500" : "text-dark100_light900"}`}
               >
                 {item.label}
               </p>
